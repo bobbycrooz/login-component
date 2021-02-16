@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #F2E1F4;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F2E1F4;
+}
+body .profile {
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "Noto Sans JP", sans-serif;
+}
+body .main__three {
+  margin: 0 30px;
+  padding: 20px 25px;
+  border-radius: 7px;
+  box-shadow: 0 0 5px #6e6e6e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+}
+@media only screen and (max-width: 900px) {
+  body .main__three {
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  body .main__three {
+    max-width: 350px;
+  }
+}
+body .main__three .modal__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+body .main__three .modal__container .image_box {
+  max-width: 55%;
+}
+@media only screen and (max-width: 900px) {
+  body .main__three .modal__container .image_box {
+    display: none;
+  }
+}
+body .main__three .modal__container .image_box img {
+  width: 100%;
+  height: 100%;
+}
+body .main__three .modal__container form {
+  width: 40%;
+  margin-right: 10px;
+}
+@media only screen and (max-width: 900px) {
+  body .main__three .modal__container form {
+    width: 100%;
+  }
+}
+body .main__three .modal__container form .topic {
+  font-size: 27px;
+  font-weight: 600;
+  color: #EA63FF;
+}
+body .main__three .modal__container form .input_box {
+  height: 50px;
+  margin: 16px 0;
+  position: relative;
+}
+body .main__three .modal__container form .input_box input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  background-color: #F2E1F4;
+  border: none;
+  padding-left: 7px;
+  font-weight: 600;
+}
+body .main__three .modal__container form .input_box label {
+  position: absolute;
+  margin-left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+  font-size: 13px;
+  color: #EA63FF;
+}
+body .main__three .modal__container form .input_box input:valid,
+body .main__three .modal__container form .input_box input:focus {
+  border: 2px solid #EA63FF;
+  background-color: #fff;
+}
+body .main__three .modal__container form .input_box input:valid ~ label,
+body .main__three .modal__container form .input_box input:focus ~ label {
+  top: 0;
+  left: 4px;
+  background-color: #fff;
+}
+body .main__three .modal__container form .input_box input[type=submit] {
+  background-color: #EA63FF;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+body .main__three .modal__container form .input_box input[type=submit]:hover {
+  background-color: #fff;
+  color: #EA63FF;
+}
+body .main__three .modal__container form .message_box {
+  position: relative;
+  height: 60px;
+}
+body .main__three .modal__container form .message_box label {
+  position: absolute;
+  margin-left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+  font-size: 13px;
+  color: #EA63FF;
+}
+body .main__three .modal__container form .message_box textarea {
+  position: absolute;
+  width: 100%;
+  border: 2px solid transparent;
+  resize: none;
+  height: 100%;
+  background-color: #F2E1F4;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+body .main__three .modal__container form .message_box textarea:focus {
+  border: 2px solid #EA63FF;
+  background-color: #fff;
+}
+body .main__three .modal__container form .message_box textarea:focus ~ label {
+  font-size: 13px;
+  position: absolute;
+  top: 0;
+  left: 8px;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */

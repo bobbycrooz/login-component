@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+// coolors
+$p: #170312;
+$s: #F2E1F4;
+$t: #EA63FF;
+
+$neu: #fff;
+// fonts
+$ff: 'Poppins', sans-serif;
+$ff2: 'Noto Sans JP', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $ff;
+   
+}
+body{
+    background-color: $s;
+}
+
+@mixin breakpoint($size) {
+    @media  only screen and (max-width:$size) {
+        @content
+    }
+    
+}
+
+
+// component 2
+
+
+
+     body{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background: $s;
+         .profile{
+             font-size: 13px;
+             font-weight: 300;
+             font-family: $ff2;
+         }
+         .main__three{
+             margin: 0 30px;
+             padding: 20px 25px;
+             border-radius: 7px;
+             box-shadow: 0 0 5px rgb(110, 110, 110);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+             max-width: 800px;
+             width: 100%;
+             background: #fff;
+             @include breakpoint(900px){
+                 &{
+                     max-width: 600px;
+                 }
+             }
+             @include breakpoint(680px){
+                &{
+                    max-width: 350px;
+                }
+            }
+        .modal__container{
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+           
+            .image_box{
+                max-width: 55%;
+                @include breakpoint(900px){
+                    &{
+                       display: none;
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            form{
+                width: 40%;
+                margin-right: 10px;
+                @include breakpoint(900px){
+                    &{
+                        width: 100%;
+                    }
+                }
+                .topic{
+                    font-size: 27px;
+                    font-weight: 600;
+                    color: $t;
+                }
+                .input_box{
+                    height: 50px;
+                    margin: 16px 0;
+                   
+                    position: relative;
+                    input{
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 5px;
+                        outline: none;
+                        font-size: 16px;
+                        background-color:$s;
+                        border: none;
+                        padding-left: 7px;
+                        font-weight: 600;
+                    }
+                    label{
+                        position: absolute;
+                        margin-left: 8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: all 0.4s ease;
+                        font-size: 13px;
+                        color: $t;
+                      
+
+                    }
+                    input:valid,
+                    input:focus{
+                        border: 2px solid $t;
+                        background-color: $neu;
+                    }
+                  
+                    input:valid ~ label,
+                    input:focus ~ label {
+                        top: 0;
+                        left: 4px;
+                   
+                        background-color: $neu;
+
+
+                    }
+
+                    input[type="submit"]{
+                        background-color: $t;
+                        color: #fff;
+                        transition: all 0.4s ease;
+
+                        &:hover{
+                        background-color: $neu;
+                        color: $t;
+
+                        }
+
+                    }
+    
+                }
+                .message_box{
+                    position: relative;
+                    height: 60px;
+                    label{
+                        position: absolute;
+                        margin-left: 8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: all 0.4s ease;
+                        font-size: 13px;
+                        color: $t;
+                    }
+                    textarea{
+                        position:absolute;
+                        width:100%;
+                        border: 2px solid transparent;
+                        resize: none;
+                        height:100%;
+                        background-color:$s;
+                        border-radius: 6px;
+                        outline: none;
+                        font-size: 16px;
+                        padding:5px 10px;
+                        
+                        &:focus
+                        
+                       {
+                       
+                        border: 2px solid $t;
+                        background-color: $neu;
+                        & ~ label
+                        {
+                            font-size: 13px;
+                            position: absolute;
+                            top:0;
+                            left: 8px;
+                            background-color: $neu;
+
+                        }
+
+                        }
+                     
+                    }
+
+                    
+                }
+                
+               
+            }
+           
+         }
+        }
+     }
+    
